@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.head{
+    background-color: blue;
+    text-align:center;
+    font-size: 2rem;
+    border:10px solid black;
+
+}
+table {
+    border-collapse: collapse;  /* merges double borders into single solid lines */
+  ;         /* optional */
+}
+table{
+    margin:20px 100px;
+}
+td, th {
+    border: 1px solid black;    /* solid black borders */
+    padding: 8px;
+}
+button{
+    margin:30px;
+    background-color: #a8d6a5;
+}
+ #img1{
+        float:left;
+        height:350px;
+}
+ #img2{
+        float:right;
+        height:350px;
+}
+.table-img{
+    display:flex;
+    gap:50px
+}
+.container{
+   width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(107, 44, 162, 0.5);
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr); /* 4 equal columns */
+    gap: 20px;
+    padding: 20px;
+}
+.container > div {
+    border: 1px solid white;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+
+  #img1, #img2 {
+    height: 250px; /* reduce image size */
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .table-img {
+    flex-direction: column; /* stack basket + table + mango vertically */
+    align-items: center;
+  }
+}
+
+  #img1, #img2 {
+    float: none; /* remove float on mobile */
+    height: 200px;
+    width: 80%;
+  }
+ h3{
+    margin-top:10px;
+    text-align:center;
+}
+.container img {
+    width: 100%;
+    height: 180px;      /* same height for all */
+    object-fit: cover;  /* crops neatly */
+    border-radius: 8px; /* optional rounded corners */
+}
+
+.papaya img{
+  
+    width:300px
+}
+.container button {
+    margin: 5px;
+    /* padding: 6px 12px; */
+    background-color: yellow;
+    border: 1px solid black;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    margin: 20px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 20px; /* space between links */
+  justify-content: center; /* center them horizontally */
+  align-items: center;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color: blue; /* you can style as you want */
+}

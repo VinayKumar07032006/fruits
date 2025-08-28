@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Garvit's Online Store — Purchase</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;              /* full screen height */
+      background: #f2f2f2;        /* light grey background */
+      font-family: Arial, sans-serif;
+    }
+    .delivery {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #279db1;  /* your chosen background */
+      padding: 30px;
+      border-radius: 12px;
+      width: 380px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      color: white;
+    }
+    .delivery h2 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    label, p {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+    }
+    textarea {
+      resize: none;
+    }
+    #sub {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: yellow;
+      color: black;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #sub:hover {
+      background-color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="delivery">
+    <h2>Delivery Details</h2>
+    <form method="POST" action="/perchase">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        required
+      />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
+
+      <label for="phone">Phone No.:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Enter your mobile number"
+        required
+      />
+
+      <label for="address">Enter your address</label>
+      <textarea
+        name="address"
+        id="address"
+        cols="30"
+        rows="6"
+        placeholder="Enter your address here"
+        required
+      ></textarea>
+
+      <button id="sub" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
